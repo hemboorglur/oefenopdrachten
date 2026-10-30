@@ -1,0 +1,24 @@
+ADC resolutie:
+
+Op 4-bit geeft digitale waarde 6 een voltage van 1.320V
+Waardes 5 en 7 geven 1.100V en 1.540
+De nauwkeurigheid is dan ±0.22V
+
+Op 6-bit geeft digitale waarde 28 een voltage van 1.467V
+Waardes 27 en 29 geven 1.414V en 1.519V
+De nauwkeurigheid is dan ±0.0525V
+
+Op 10-bit geeft digitale waarde 768 een voltage van 2.477V
+Waardes 767 en 769 geven 2.474V en 2.481V
+De nauwkeurigheid is dan ±0.003V
+
+
+De Arduino heeft een bereik van 0V tot 3.3V 
+In digitale waardes: van 0 tot en met 1023.
+m.a.w. 1024 niveau's
+
+Een simpele conversie-vergelijking:
+
+[voltage] = (max_volt / max_adc) * [ADC_waarde] = (3.3/1023) * [ADC_waarde]
+en omgekeerd:
+[ADC_waarde] = (max_adc / max_volt) * [ADC_waarde] = (1023/3.3) * [ADC_waarde]
